@@ -3,9 +3,10 @@ PhaseLab System Display C++ / Arduino firmware for monitoring dual-channel tempe
 
 <div align="left">
   <a href="https://wokwi.com/projects/470877345133871105">
-  <img src="https://thumbs.wokwi.com/projects/470877345133871105/social/1785322480223.png" width="400px" alt="Preview demo">
-  <h3>Simulated on Wokwi</h3>
+    <h3>Simulated on Wokwi</h3>
   </a>
+  <img src="https://thumbs.wokwi.com/projects/470877345133871105/social/1785322480223.png" width="400px" alt="Preview demo">
+  
 </div>
 
 ## Component Standalone
