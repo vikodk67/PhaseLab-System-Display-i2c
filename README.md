@@ -20,6 +20,11 @@ PhaseLab System Display C++ / Arduino firmware for monitoring dual-channel tempe
 
 ## Change Name display Watermark
 ### - Bautrate 9600
-## Command
-### - NAME=HALLO DUNIA (SET WATERMARK)
-### - RESET (DELETE WATERMARK (DEFAULT)) 
+## Command (SET WATERMARK)
+```bash
+NAME=HALLO DUNIA
+```
+## Command (DELETE WATERMARK (DEFAULT))
+```bash
+RESET
+```
