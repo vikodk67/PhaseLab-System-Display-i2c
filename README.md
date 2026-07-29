@@ -14,12 +14,13 @@ PhaseLab System Display C++ / Arduino firmware for monitoring dual-channel tempe
 - Modul I2C (SDA SCL)
 - LCD Liquid Crystal Display (16x2)
 - Diode
+- LED diode (For Power & RX TX)
 - IC 7805 (stepdown 12v - 5v)
 - Capacitor polar (6.3v 1000uF LOW ESR)
 - perfboard double layer
 
 ## Change Name display Watermark
-### - Bautrate 9600
+#### - Bautrate 9600
 ## Command (SET WATERMARK)
 ```bash
 NAME=HALLO DUNIA
