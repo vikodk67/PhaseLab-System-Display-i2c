@@ -7,12 +7,6 @@ PhaseLab System Display C++ / Arduino firmware for monitoring dual-channel tempe
   <h3>Simulated on Wokwi</h3>
   </a>
 </div>
-<div align="left">
-  <a href="https://wokwi.com/projects/470877345133871105">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE-YhYBIs_LQMz-zw7nJloBMXKLaZadkGcZVDA4e1nkegPGGZvhbqNlKCY&s=10" width="300px" alt="Preview demo">
-  <h3>Simulated on Wokwi</h3>
-  </a>
-</div>
 
 ## Component Standalone
 - Potensio 10K/50K
@@ -27,6 +21,9 @@ PhaseLab System Display C++ / Arduino firmware for monitoring dual-channel tempe
 - IC 7805 (stepdown 12v - 5v)
 - Capacitor polar (6.3v 1000uF LOW ESR)
 - perfboard double layer
+<div align="left">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE-YhYBIs_LQMz-zw7nJloBMXKLaZadkGcZVDA4e1nkegPGGZvhbqNlKCY&s=10" width="300px" alt="Preview demo">
+</div>
 
 ## Change Name display Watermark
 #### - Bautrate 9600
