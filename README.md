@@ -7,9 +7,18 @@ PhaseLab System Display C++ / Arduino firmware for monitoring dual-channel tempe
   <h3>Simulated on Wokwi</h3>
   </a>
 </div>
+<div align="left">
+  <a href="https://wokwi.com/projects/470877345133871105">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE-YhYBIs_LQMz-zw7nJloBMXKLaZadkGcZVDA4e1nkegPGGZvhbqNlKCY&s=10" width="300px" alt="Preview demo">
+  <h3>Simulated on Wokwi</h3>
+  </a>
+</div>
 
 ## Component Standalone
-- Potensio 10K
+- Potensio 10K/50K
+- Crystal 16MHZ Xtal
+- Capacitor non-polar 22pf
+- Resistor 10K (For Pin Reset)
 - IC LM35 (input 5-30V Volt DC)
 - Modul I2C (SDA SCL)
 - LCD Liquid Crystal Display (16x2)
