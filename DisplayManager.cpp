@@ -2,12 +2,14 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
-static LiquidCrystal_I2C lcd(0x27, 16, 2); // 0x27
+static LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 static int lastTA = -1;
 static int lastTB = -1;
-static int lastCA = -1;
-static int lastCB = -1;
+
+// ==== UBAH TIPE DATA INI DARI int MENJADI String ====
+static String lastCA = "";
+static String lastCB = "";
 
 static void printCenter(int row, String text) {
   int col = (16 - text.length()) / 2;
@@ -37,31 +39,29 @@ void showIntro() {
 }
 
 void updateDisplay(const SensorData& data) {
-  // CA 
+  // CA (Kiri Atas)
   if (data.percentCA != lastCA) {
     lcd.setCursor(0, 0);
     lcd.print("CA:");
     lcd.setCursor(3, 0);
-    lcd.print("    ");
+    lcd.print("    "); // Hapus karakter lama
     lcd.setCursor(3, 0);
-    lcd.print(data.percentCA);
-    lcd.print("%");
+    lcd.print(data.percentCA); // Langsung print string (misal: "95%" atau "MAX")
     lastCA = data.percentCA;
   }
 
-  // CB 
+  // CB (Kiri Bawah)
   if (data.percentCB != lastCB) {
     lcd.setCursor(0, 1);
     lcd.print("CB:");
     lcd.setCursor(3, 1);
-    lcd.print("    ");
+    lcd.print("    "); // Hapus karakter lama
     lcd.setCursor(3, 1);
     lcd.print(data.percentCB);
-    lcd.print("%");
     lastCB = data.percentCB;
   }
 
-  // TA
+  // TA (Kanan Atas)
   if (data.tempA != lastTA) {
     lcd.setCursor(8, 0);
     lcd.print("        ");
@@ -69,7 +69,7 @@ void updateDisplay(const SensorData& data) {
     lastTA = data.tempA;
   }
 
-  // TB
+  // TB (Kanan Bawah)
   if (data.tempB != lastTB) {
     lcd.setCursor(8, 1);
     lcd.print("        ");

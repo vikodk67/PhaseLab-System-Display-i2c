@@ -4,8 +4,10 @@
 #include "DisplayManager.h"
 
 // Inisialisasi variabel global dari Config.h
-String VersionControl = "1.0.2-not stable";
+String VersionControl = "1.1.4-not stable";
 String displayName = "PHASELAB";
+int calibMaxCA = DEFAULT_CAL_MAX;
+int calibMaxCB = DEFAULT_CAL_MAX;
 
 void setup() {
   Serial.begin(9600);
@@ -19,7 +21,7 @@ void setup() {
   } else {
     saveName(displayName);
   }
-
+  loadCalibration();
   showIntro();
 }
 

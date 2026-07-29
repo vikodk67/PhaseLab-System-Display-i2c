@@ -37,7 +37,7 @@ SensorData readSensors() {
   int avgCA = totalCA / SAMPLE_COUNT;
   int avgCB = totalCB / SAMPLE_COUNT;
 
-  // Konversi LM35 (5.0V ADC Ref)
+  // Konversi LM35
   float voltageTA = avgTA * (5.0 / 1023.0);
   float voltageTB = avgTB * (5.0 / 1023.0);
 
@@ -45,8 +45,12 @@ SensorData readSensors() {
   data.tempA = voltageTA * 100.0;
   data.tempB = voltageTB * 100.0;
 
-  data.percentCA = constrain(map(avgCA, 0, 1023, 0, 100), 0, 100);
-  data.percentCB = constrain(map(avgCB, 0, 1023, 0, 100), 0, 100);
+  // Gunakan variabel kalibrasi dari EEPROM
+  int valCA = constrain(map(avgCA, 0, calibMaxCA, 0, 100), 0, 100);
+  int valCB = constrain(map(avgCB, 0, calibMaxCB, 0, 100), 0, 100);
+
+  data.percentCA = (valCA >= 100) ? "MAX" : String(valCA) + "%";
+  data.percentCB = (valCB >= 100) ? "MAX" : String(valCB) + "%";
 
   return data;
 }

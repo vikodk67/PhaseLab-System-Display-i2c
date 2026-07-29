@@ -9,22 +9,30 @@ const int PIN_TB = A1;
 const int PIN_CA = A2;
 const int PIN_CB = A3;
 
-// ==== CONSTANTS ====
-#define EEPROM_ADDR 0
+// ==== EEPROM ADDRESS MAP ====
+#define EEPROM_ADDR_NAME 0
+#define EEPROM_ADDR_CAL_CA 16
+#define EEPROM_ADDR_CAL_CB 18
+
 #define MAX_NAME_LENGTH 16
 const int SAMPLE_COUNT = 10;
+
+// ==== DEFAULT VALUES ====
+const int DEFAULT_CAL_MAX = 1015;
 
 // ==== DATA STRUCTURE ====
 struct SensorData {
   int tempA;
   int tempB;
-  int percentCA;
-  int percentCB;
+  String percentCA;
+  String percentCB;
 };
 
-// Global Versioning & Name
+// Global Shared Variables
 extern String VersionControl;
 extern String displayName;
+extern int calibMaxCA;
+extern int calibMaxCB;
 
 #endif
 
