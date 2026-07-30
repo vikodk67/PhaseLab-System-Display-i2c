@@ -36,7 +36,6 @@ void loadCalibration() {
   EEPROM.get(EEPROM_ADDR_CAL_CA, calibMaxCA);
   EEPROM.get(EEPROM_ADDR_CAL_CB, calibMaxCB);
 
-  // Jika EEPROM masih kosong (0xFFFF / -1) atau nilainya di luar rentang ADC valid
   if (calibMaxCA < 500 || calibMaxCA > 1023) {
     saveCalibCA(DEFAULT_CAL_MAX);
   }
